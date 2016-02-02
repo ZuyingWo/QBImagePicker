@@ -98,7 +98,7 @@
                             <outlet property="delegate" destination="QL5-wR-LYt" id="gZH-IY-ikI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Photos" id="r7D-Kp-3yC">
+                    <navigationItem key="navigationItem" title="Photos" id="r7D-Kp-3yC" customClass="QBNavigationItem">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="s1M-VA-CeM">
                             <connections>
                                 <action selector="cancel:" destination="QL5-wR-LYt" id="l9K-7e-2qt"/>

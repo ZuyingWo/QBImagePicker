@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C99E2181C60A8A900928FDE /* QBNavigationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C99E2161C60A8A900928FDE /* QBNavigationViewController.h */; };
+		1C99E2191C60A8A900928FDE /* QBNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C99E2171C60A8A900928FDE /* QBNavigationViewController.m */; };
 		790A850F1AE7D4D9008E2A80 /* QBSlomoIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = 790A850D1AE7D4D9008E2A80 /* QBSlomoIconView.h */; };
 		790A85101AE7D4D9008E2A80 /* QBSlomoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 790A850E1AE7D4D9008E2A80 /* QBSlomoIconView.m */; };
 		AA3AD06F1ACF9A3A00BF523E /* QBVideoIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3AD06D1ACF9A3A00BF523E /* QBVideoIconView.h */; };
@@ -81,6 +83,8 @@
 
 /* Begin PBXFileReference section */
 		07A50A481B331A840010E048 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
+		1C99E2161C60A8A900928FDE /* QBNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBNavigationViewController.h; sourceTree = "<group>"; };
+		1C99E2171C60A8A900928FDE /* QBNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBNavigationViewController.m; sourceTree = "<group>"; };
 		74BB93661B2CE91A0044EB60 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
 		790A850D1AE7D4D9008E2A80 /* QBSlomoIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBSlomoIconView.h; sourceTree = "<group>"; };
 		790A850E1AE7D4D9008E2A80 /* QBSlomoIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBSlomoIconView.m; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 				AAA8FE5A1ACDA554002A9710 /* QBAlbumsViewController.m */,
 				AAF1CA2D1ACE6E46005F6295 /* QBAssetsViewController.h */,
 				AAF1CA2E1ACE6E46005F6295 /* QBAssetsViewController.m */,
+				1C99E2161C60A8A900928FDE /* QBNavigationViewController.h */,
+				1C99E2171C60A8A900928FDE /* QBNavigationViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -319,6 +325,7 @@
 				790A850F1AE7D4D9008E2A80 /* QBSlomoIconView.h in Headers */,
 				AA3AD0731ACFA06700BF523E /* QBVideoIndicatorView.h in Headers */,
 				AAF1CA331ACE6FB5005F6295 /* QBAssetCell.h in Headers */,
+				1C99E2181C60A8A900928FDE /* QBNavigationViewController.h in Headers */,
 				AAF1CA2F1ACE6E46005F6295 /* QBAssetsViewController.h in Headers */,
 				AAF1CA1A1ACE5467005F6295 /* QBAlbumCell.h in Headers */,
 				AAA8FE5B1ACDA554002A9710 /* QBAlbumsViewController.h in Headers */,
@@ -503,6 +510,7 @@
 				AAF1CA301ACE6E46005F6295 /* QBAssetsViewController.m in Sources */,
 				AAF1CA1B1ACE5467005F6295 /* QBAlbumCell.m in Sources */,
 				AAA8FE221ACDA090002A9710 /* QBImagePickerController.m in Sources */,
+				1C99E2191C60A8A900928FDE /* QBNavigationViewController.m in Sources */,
 				AA3AD0741ACFA06700BF523E /* QBVideoIndicatorView.m in Sources */,
 				AAA8FE5C1ACDA554002A9710 /* QBAlbumsViewController.m in Sources */,
 			);

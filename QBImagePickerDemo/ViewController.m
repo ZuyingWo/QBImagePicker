@@ -30,7 +30,7 @@
     imagePickerController.mediaType = QBImagePickerMediaTypeAny;
     imagePickerController.allowsMultipleSelection = (indexPath.section == 1);
     imagePickerController.showsNumberOfSelectedAssets = YES;
-    imagePickerController.barTintColor = [UIColor colorWithRed:51/255.0f green:60/255.f blue:81/255.f alpha:1.0];
+    
     if (indexPath.section == 1) {
         switch (indexPath.row) {
             case 1:

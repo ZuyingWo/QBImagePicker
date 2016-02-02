@@ -74,8 +74,4 @@
     self.albumsNavigationController = navigationController;
 }
 
--(void)barTintColor:(UIColor*)barTintColor
-{
-    self.albumsNavigationController.navigationBar.barTintColor = barTintColor;
-}
 @end

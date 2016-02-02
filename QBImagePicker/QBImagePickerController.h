@@ -30,6 +30,7 @@ typedef NS_ENUM(NSUInteger, QBImagePickerMediaType) {
 };
 
 @interface QBImagePickerController : UIViewController
+@property (nonatomic) UIColor * barTintColor;
 
 @property (nonatomic, weak) id<QBImagePickerControllerDelegate> delegate;
 

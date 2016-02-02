@@ -19,3 +19,5 @@
 
 "assets.toolbar.item-selected" = "选择了%ld项";
 "assets.toolbar.items-selected" = "选择了%ld项";
+
+"albums.download.error" = "现在，无法下载该图片";

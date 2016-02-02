@@ -19,3 +19,5 @@
 
 "assets.toolbar.item-selected" = "%ld items seleccionados";
 "assets.toolbar.items-selected" = "%ld items seleccionados";
+
+"albums.download.error" = "Ahora, no se puede descargar la foto";

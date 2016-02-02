@@ -255,7 +255,7 @@
                             <outlet property="delegate" destination="QiH-NZ-ZGN" id="0SZ-eY-tkn"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Album Title" id="wKf-eb-U1x">
+                    <navigationItem key="navigationItem" title="Album Title" id="wKf-eb-U1x" customClass="QBNavigationItem">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="nai-ZV-lR8">
                             <connections>
                                 <action selector="done:" destination="QiH-NZ-ZGN" id="RYV-Ik-8ry"/>

@@ -587,14 +587,68 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
         
         self.lastSelectedItemIndexPath = indexPath;
         
-        [self updateDoneButtonState];
-        
-        if (imagePickerController.showsNumberOfSelectedAssets) {
-            [self updateSelectionInfo];
+        if (imagePickerController.showDownloadAnimation) {
             
-            if (selectedAssets.count == 1) {
-                // Show toolbar
-                [self.navigationController setToolbarHidden:NO animated:YES];
+            PHImageRequestOptions *option = [PHImageRequestOptions new];
+            option.synchronous = YES;
+            option.networkAccessAllowed = YES;
+            option.progressHandler = ^ (double progress,
+                                        NSError *__nullable error,
+                                        BOOL *stop,
+                                        NSDictionary *__nullable info) {
+                
+                NSLog(@"%f",progress);
+                
+                
+            };
+            [[PHImageManager defaultManager]
+             requestImageForAsset:asset
+             targetSize:CGSizeMake(asset.pixelWidth , asset.pixelHeight)
+             contentMode:PHImageContentModeAspectFit
+             options:option
+             resultHandler:^(UIImage *result, NSDictionary *info) {
+                 if (result) {
+                     
+                     [self updateDoneButtonState];
+                     
+                     if (imagePickerController.showsNumberOfSelectedAssets) {
+                         [self updateSelectionInfo];
+                         
+                         if (selectedAssets.count == 1) {
+                             // Show toolbar
+                             [self.navigationController setToolbarHidden:NO animated:YES];
+                         }
+                     }
+                     
+                 }else{
+                     
+                     [collectionView deselectItemAtIndexPath:self.lastSelectedItemIndexPath animated:NO];
+                     
+                     UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@""
+                                                                                               message:NSLocalizedStringFromTableInBundle(@"albums.download.error", @"QBImagePicker", self.imagePickerController.assetBundle, nil)
+                                                                                        preferredStyle:UIAlertControllerStyleAlert];
+                     
+                     [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                                         style:UIAlertActionStyleDefault
+                                                                       handler:^(UIAlertAction *action) {
+                                                                           
+                                                                           
+                                                                       }]];
+                     
+                     [self presentViewController:alertController animated:YES completion:nil];
+                 }
+             }];
+        }else{
+            
+            [self updateDoneButtonState];
+            
+            if (imagePickerController.showsNumberOfSelectedAssets) {
+                [self updateSelectionInfo];
+                
+                if (selectedAssets.count == 1) {
+                    // Show toolbar
+                    [self.navigationController setToolbarHidden:NO animated:YES];
+                }
             }
         }
     } else {

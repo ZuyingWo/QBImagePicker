@@ -19,3 +19,5 @@
 
 "assets.toolbar.item-selected" = "%ld Element ausgewählt";
 "assets.toolbar.items-selected" = "%ld Elemente ausgewählt";
+
+"albums.download.error" = "Nun, man kann nicht laden Sie das Bild";

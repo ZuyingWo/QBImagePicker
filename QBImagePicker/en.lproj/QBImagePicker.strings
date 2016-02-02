@@ -19,3 +19,5 @@
 
 "assets.toolbar.item-selected" = "%ld Item Selected";
 "assets.toolbar.items-selected" = "%ld Items Selected";
+
+"albums.download.error" = "Failed to download this file";

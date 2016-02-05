@@ -427,7 +427,6 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 
 
 #pragma mark - UICollectionViewDataSource
--(void)coll
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;

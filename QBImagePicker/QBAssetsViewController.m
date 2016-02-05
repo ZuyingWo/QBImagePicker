@@ -106,7 +106,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     // Scroll to bottom
     if (self.fetchResult.count > 0 && self.isMovingToParentViewController && !self.disableScrollToBottom) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:(self.fetchResult.count - 1) inSection:0];
-        [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionBottom animated:NO];
+        [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionTop animated:NO];
     }
 }
 
@@ -124,6 +124,13 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     self.disableScrollToBottom = NO;
     
     [self updateCachedAssets];
+    
+    NSInteger section = [self numberOfSectionsInCollectionView:self.collectionView] - 1;
+    NSInteger item = [self collectionView:self.collectionView numberOfItemsInSection:section] - 1;
+    NSIndexPath *lastIndexPath = [NSIndexPath indexPathForItem:item inSection:section];
+    [self.collectionView scrollToItemAtIndexPath:lastIndexPath
+                                atScrollPosition:UICollectionViewScrollPositionBottom
+                                        animated:NO];
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
@@ -427,6 +434,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 
 
 #pragma mark - UICollectionViewDataSource
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;
